@@ -12,34 +12,30 @@ public class IAPasive : MonoBehaviour {
     float y;
     bool giroTime;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void FixedUpdate () {
 
-        Debug.Log("Entro a update");
         time += 1;
         Target.transform.Translate(Target.transform.forward * speed * Time.fixedDeltaTime);
         Target.transform.Rotate(new Vector3(0, y, 0));
 
-        if(time >= Random.Range(100,2500))
+        if (time >= Random.Range(100, 2500))
         {
             Girar();
             time = 0;
             giroTime = true;
         }
 
-        if(giroTime == true)
+        if (giroTime == true)
         {
-            if (time >= Random.Range(10, 50)) {
+            if (time >= Random.Range(10, 50))
+            {
                 y = 0;
                 giroTime = false;
             }
         }
-	}
+
+    }
 
     public void Girar()
     {

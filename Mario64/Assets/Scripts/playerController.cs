@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour {
 
+    public static playerController instance;
+
     //public Rigidbody myRB;
     public float moveSpeed = 15f;
     public float jumpForce = 35f;
     public CharacterController controller;
 
     private Vector3 moveDirection;
-    public float gravityScale = 8f;
+    public float gravityScale = 9f;
+    public float bounceForce = 8f;
 
     // ------ Animator -------//
     public Animator anim;
@@ -20,6 +23,17 @@ public class playerController : MonoBehaviour {
 
     public GameObject playerModel;
 
+    public bool isKnocking;
+    public float knockBackLength = .5f;
+    private float knockbackCounter;
+    public Vector2 knockbackPower;
+
+    public GameObject[] playerPieces;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     
     void Start() {
         //myRB = GetComponent<Rigidbody>();
@@ -31,7 +45,8 @@ public class playerController : MonoBehaviour {
  
         float yStore = moveDirection.y;
         moveDirection = (transform.forward * Input.GetAxis("Vertical")) +(transform.right * Input.GetAxis("Horizontal"));
-        moveDirection = moveDirection.normalized * moveSpeed;
+        //moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"),0f, Input.GetAxis("Vertical"));
+        moveDirection = moveDirection.normalized*moveSpeed;  //.normalized * moveSpeed;
         moveDirection.y = yStore;
 
         if(controller.isGrounded)
@@ -63,4 +78,19 @@ public class playerController : MonoBehaviour {
         //anim.SetBool("isGrounded", controller.isGrounded);
         anim.SetFloat("speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
     }
+
+    public void Knockback()
+    {
+        isKnocking = true;
+        knockbackCounter = knockBackLength;
+        Debug.Log("Knocked Back");
+
+    }
+
+    public void Bounce()
+    {
+        moveDirection.y = bounceForce;
+        controller.Move(moveDirection * Time.deltaTime);
+    }
+
 }

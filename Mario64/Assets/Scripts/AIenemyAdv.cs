@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class AIenemyAdv : MonoBehaviour {
 
     [Header("Ajustes")]
-
     public int tiempo;
     public float Speed;
     public Transform PuntoGuarida;
@@ -51,9 +50,10 @@ public class AIenemyAdv : MonoBehaviour {
 
         if(Idle == true)
         {
-            
             transform.Translate(Vector3.forward * Speed * Time.fixedDeltaTime);
             transform.Rotate(new Vector3(0, y, 0));
+
+            //Animacion
             anim.SetBool("Caminar", true);
             anim.SetBool("Correr", false);
 
@@ -75,6 +75,7 @@ public class AIenemyAdv : MonoBehaviour {
         }
         else if(Atacar == true)
         {
+            //Animacion
             anim.SetBool("Caminar", false);
             anim.SetBool("Correr", true);
 
@@ -87,6 +88,7 @@ public class AIenemyAdv : MonoBehaviour {
         }
         else if(Alerta == true)
         {
+            //Animacion
             anim.SetBool("Caminar", false);
             anim.SetBool("Correr", true);
 
@@ -110,7 +112,7 @@ public class AIenemyAdv : MonoBehaviour {
 
     public void CambiarEstado()
     {
-        Estado = Random.Range(2,4);
+        Estado = Random.Range(2,3);
         if(Estado == 2)
         {
             Cambio = false;

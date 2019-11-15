@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class cameraController : MonoBehaviour {
 
     public Transform target;
@@ -12,6 +11,14 @@ public class cameraController : MonoBehaviour {
     public float maxViewAngle = 65f;
     public float minViewAngle = -60f;
     public bool invertY;
+
+    public static cameraController instance;
+//    public CinemachineBrain theCMBrain;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
 	// Use this for initialization
 	void Start () {

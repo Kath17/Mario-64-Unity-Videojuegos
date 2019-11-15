@@ -7,6 +7,9 @@ public class coinScript : MonoBehaviour {
     public int value;
     public GameObject pickupEffect;
 
+    public int healAmount;
+    public bool isFullHeal;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -26,6 +29,14 @@ public class coinScript : MonoBehaviour {
             Instantiate(pickupEffect, transform.position, transform.rotation);
             Destroy(this.gameObject);
             //Debug.Log("Moneda conseguida");
+            if(isFullHeal)
+            {
+                HealthManager.instance.ResetHealth();
+            }
+            else
+            {
+                HealthManager.instance.AddHealth(healAmount);
+            }
         }
     }
 

@@ -16,7 +16,7 @@ public class enemyController : MonoBehaviour {
 		if(Vector3.Distance(Target.transform.position, transform.position) < distancia)
         {
             agent.SetDestination(Target.transform.position);
-            agent.speed = 3;
+            agent.speed = 5;
         }
         else
         {

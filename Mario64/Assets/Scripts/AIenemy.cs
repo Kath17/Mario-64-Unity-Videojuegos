@@ -11,11 +11,6 @@ public class AIenemy : MonoBehaviour {
     public float distance;
     public Vida vida_script;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void Update () {
 		if(Vector3.Distance(Target.transform.position, transform.position) < distance)
