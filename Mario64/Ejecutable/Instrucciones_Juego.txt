@@ -1,0 +1,15 @@
+1. Controles:
+   - A, W, S, D o flechas direccionales-> izquierda,arriba,abajo,derecha
+   - Barra espacio -> Saltar
+
+2. Items:
+   - Cajas rojas, saltar debajo de ellas para conseguir monedas
+   - Monedas: Le otorgan a Mario 1 punto de salud
+
+3. Enemigos:
+   - Bob-ombs pequeños: Le quitan a Mario 1 punto de salud
+   - Jefe Bob-omb: Le quitan a Mario 3 puntos de salud en cada ataque
+   - Cañon: Cada bala de cañón le quita a Mario 1 punto de salud
+   - Para eliminar a los Bob-ombs y al jefe saltar sobre ellos.
+
+4. Salir del juego con la tecla "Q"

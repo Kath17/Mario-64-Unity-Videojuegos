@@ -77,6 +77,12 @@ public class playerController : MonoBehaviour {
         }
         //anim.SetBool("isGrounded", controller.isGrounded);
         anim.SetFloat("speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
+
+        if (Input.GetKeyDown(KeyCode.Q) == true)
+        {
+            Debug.Log("Escapar del juego");
+            Application.Quit();
+        }
     }
 
     public void Knockback()

@@ -22,7 +22,7 @@ public class Projectile : MonoBehaviour
     {
         //yield return new WaitForSeconds(15f);
         float distanceToPlayer = Vector3.Distance(transform.position, playerController.instance.transform.position);
-        if (distanceToPlayer < 18)
+        if (distanceToPlayer < 16 || distanceToPlayer >115)
         {
             Debug.Log("No dispara");
         }
