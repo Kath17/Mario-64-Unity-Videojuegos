@@ -570,7 +570,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.67, y: 0.46, z: 2.9}
+  m_Size: {x: 3.34, y: 0.46, z: 3.14}
   m_Center: {x: -2.06, y: 2.98, z: 0.35}
 --- !u!95 &48773693
 Animator:
@@ -6899,7 +6899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &907513387
 Animator:
   serializedVersion: 3
@@ -11293,7 +11293,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1244209612}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3de9aba76f30b0d4da0e0cdbb0470658, type: 3}
   m_Name: 
@@ -11308,7 +11308,7 @@ NavMeshAgent:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1244209612}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -11385,7 +11385,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1244209612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.01, y: 4.37, z: 110.03}
+  m_LocalPosition: {x: -25.79, y: 2.48, z: 94.74}
   m_LocalScale: {x: 2.9681597, y: 2.9681578, z: 2.9681578}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11397,7 +11397,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1244209612}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca1376551fa7b1045823af55f9fb61e1, type: 3}
   m_Name: 
@@ -17307,6 +17307,21 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 135636769670857202, guid: fa579c038e032784589a567bb2e98541,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 135636769670857202, guid: fa579c038e032784589a567bb2e98541,
+        type: 2}
+      propertyPath: m_Center.y
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 135636769670857202, guid: fa579c038e032784589a567bb2e98541,
+        type: 2}
+      propertyPath: m_Center.z
+      value: -0.02
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114076895522512636, guid: fa579c038e032784589a567bb2e98541, type: 2}

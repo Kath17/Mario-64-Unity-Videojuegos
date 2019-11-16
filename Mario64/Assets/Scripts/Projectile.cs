@@ -21,7 +21,15 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         //yield return new WaitForSeconds(15f);
-        LaunchProjectile();
+        float distanceToPlayer = Vector3.Distance(transform.position, playerController.instance.transform.position);
+        if (distanceToPlayer < 18)
+        {
+            Debug.Log("No dispara");
+        }
+        else
+        {
+            LaunchProjectile();
+        }
     }
 
     void LaunchProjectile()
@@ -40,7 +48,6 @@ public class Projectile : MonoBehaviour
             Rigidbody obj = Instantiate(bulletPrefabs, shootPoint.position, Quaternion.identity);
             obj.velocity = V0;
         }
-
         //}
     }
 

@@ -14,9 +14,9 @@ public class Prueba_RayCast : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        OneRay();
+        //OneRay();
         //TwoRays();
-        //ThreeRays();
+        ThreeRays();
 	}
 
     void OneRay()

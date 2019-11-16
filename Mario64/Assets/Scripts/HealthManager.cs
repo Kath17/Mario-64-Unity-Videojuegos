@@ -14,8 +14,6 @@ public class HealthManager : MonoBehaviour {
 
     public Text healthText;
 
-
-
     private void Awake()
     {
         instance = this;
@@ -53,7 +51,6 @@ public class HealthManager : MonoBehaviour {
             
         }
 	}
-
     public void Hurt()
     {
         //Debug.Log("Entro a funcion Hurt");
